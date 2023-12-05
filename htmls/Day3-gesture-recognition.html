@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Day2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Day3-gesture-recognition</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -9113,6 +9113,38 @@ Using 288 instances for testing
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5d094008">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># Use abbrevations for feature-test operator pairs</span>
+<span class="n">printmodel</span><span class="o">.</span><span class="p">(</span><span class="n">ruleset</span><span class="p">;</span><span class="w"> </span><span class="n">use_feature_abbreviations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">show_metrics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">threshold_digits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">variable_names_map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">names</span><span class="p">(</span><span class="n">X_df</span><span class="p">)],</span><span class="n">parenthesize_atoms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">hidemodality</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+UndefVarError: `listrules` not defined
+
+Stacktrace:
+ [1] top-level scope
+   @ In[1]:2</pre>
+</div>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a5b11776">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9178,6 +9210,22 @@ Using 288 instances for testing
 
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=752f4d14">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">¶</a></h1><p>Rule 4 and 5 talk about properties holding on either <em>any</em> or <em>all</em> intervals.
+There is probably a shorter way of phrasing such formulas (which, remember, are aliases for <code>⟨G⟩(min[*] &gt;= *)</code>, <code>[G](min[*] &lt; *)</code>, etc.)</p>
+<p>Improve the recursive function <code>formula2natlang</code> so that rules 4 and 5 are translated into a simpler natural language sentence. This can be done by adding methods for the function covering specific cases.
+The function is defined in the module module <code>SoleLogics.experimentals</code> and is extended in <code>SoleModels.experimentals</code>
+and, since <code>ScalarCondition</code>s do not exist at the purely logical level, such an extension should be done in <code>SoleModels.experimentals</code>.</p>
+<p>Feel free to submit your solution by opening a pull request! 😃</p>
 </div>
 </div>
 </div>

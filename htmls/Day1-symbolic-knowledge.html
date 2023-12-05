@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Day1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Day1-symbolic-knowledge</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7455,7 +7455,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Modal-Symbolic-Learning:-Day-1">Modal Symbolic Learning: Day 1<a class="anchor-link" href="#Modal-Symbolic-Learning:-Day-1">¶</a></h1>
+<h1 id="Symbolic-knowledge-manipulation-with-SoleLogics.jl">Symbolic knowledge manipulation with SoleLogics.jl<a class="anchor-link" href="#Symbolic-knowledge-manipulation-with-SoleLogics.jl">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7509,31 +7509,17 @@ a.anchor-link {
 <pre><span class="ansi-green-intense-fg ansi-bold">  Activating</span> project at `~/Desktop/modal-symbolic-learning-course`
 <span class="ansi-green-intense-fg ansi-bold">    Updating</span> registry at `~/.julia/registries/General`
 <span class="ansi-green-intense-fg ansi-bold">    Updating</span> git-repo `https://github.com/JuliaRegistries/General.git`
-<span class="ansi-green-intense-fg ansi-bold">   Installed</span> FillArrays ─ v1.9.0
-<span class="ansi-green-intense-fg ansi-bold">  No Changes</span> to `~/Desktop/modal-symbolic-learning-course/Project.toml`
+<span class="ansi-green-intense-fg ansi-bold">   Installed</span> SoleLogics ─ v0.6.12
+<span class="ansi-green-intense-fg ansi-bold">    Updating</span> `~/Desktop/modal-symbolic-learning-course/Project.toml`
+  <span class="ansi-black-intense-fg">[b002da8f] </span><span class="ansi-yellow-intense-fg">↑ SoleLogics v0.6.11 ⇒ v0.6.12</span>
 <span class="ansi-green-intense-fg ansi-bold">    Updating</span> `~/Desktop/modal-symbolic-learning-course/Manifest.toml`
-  <span class="ansi-black-intense-fg">[1a297f60] </span><span class="ansi-yellow-intense-fg">↑ FillArrays v1.8.0 ⇒ v1.9.0</span>
+  <span class="ansi-black-intense-fg">[b002da8f] </span><span class="ansi-yellow-intense-fg">↑ SoleLogics v0.6.11 ⇒ v0.6.12</span>
 <span class="ansi-green-intense-fg ansi-bold">Precompiling</span> project...
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FillArrays</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FillArrays → FillArraysPDMatsExt</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FillArrays → FillArraysSparseArraysExt</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">FillArrays → FillArraysStatisticsExt</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Distributions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">Distributions → DistributionsTestExt</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">ScientificTypes</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">CategoricalDistributions</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">SoleData</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MLJModels</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MLJBase</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MLJEnsembles</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MLJFlow</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MLJTuning</span>
-<span class="ansi-green-fg">  ✓ </span><span class="ansi-black-intense-fg">MLJIteration</span>
-<span class="ansi-green-fg">  ✓ </span>MLJ
+<span class="ansi-green-fg">  ✓ </span>SoleLogics
 <span class="ansi-green-fg">  ✓ </span>SoleModels
 <span class="ansi-green-fg">  ✓ </span>Sole
 <span class="ansi-green-fg">  ✓ </span>ModalDecisionTrees
-  19 dependencies successfully precompiled in 47 seconds. 270 already precompiled.
+  4 dependencies successfully precompiled in 43 seconds. 288 already precompiled.
 </pre>
 </div>
 </div>
@@ -7544,13 +7530,14 @@ a.anchor-link {
   <span class="ansi-black-intense-fg">[a93c6f00] </span>DataFrames v1.6.1
   <span class="ansi-black-intense-fg">[7806a523] </span>DecisionTree v0.12.4
   <span class="ansi-black-intense-fg">[7073ff75] </span>IJulia v1.24.2
+  <span class="ansi-black-intense-fg">[033835bb] </span>JLD2 v0.4.38
 <span class="ansi-yellow-fg">⌅</span> <span class="ansi-black-intense-fg">[add582a8] </span>MLJ v0.19.5
   <span class="ansi-black-intense-fg">[c6f25543] </span>MLJDecisionTreeInterface v0.4.0
-  <span class="ansi-black-intense-fg">[e54bda2e] </span>ModalDecisionTrees v0.3.1
+  <span class="ansi-black-intense-fg">[e54bda2e] </span>ModalDecisionTrees v0.3.3
   <span class="ansi-black-intense-fg">[91a5bcdd] </span>Plots v1.39.0
   <span class="ansi-black-intense-fg">[7b3b3b3f] </span>Sole v0.3.1
-  <span class="ansi-black-intense-fg">[b002da8f] </span>SoleLogics v0.6.10
-  <span class="ansi-black-intense-fg">[4249d9c7] </span>SoleModels v0.5.2
+  <span class="ansi-black-intense-fg">[b002da8f] </span>SoleLogics v0.6.12
+  <span class="ansi-black-intense-fg">[4249d9c7] </span>SoleModels v0.5.3
   <span class="ansi-black-intense-fg">[2913bbd2] </span>StatsBase v0.34.2
   <span class="ansi-black-intense-fg">[9a3f8284] </span>Random
 <span class="ansi-cyan-intense-fg ansi-bold">Info</span> Packages marked with <span class="ansi-yellow-fg">⌅</span> have new versions available but compatibility constraints restrict them from upgrading. To see why use `status --outdated`
@@ -7564,7 +7551,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">SoleLogics</span>
@@ -7578,10 +7565,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Atom</span><span class="p">(</span><span class="s">"it's alive"</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Atom</span><span class="p">(</span><span class="s">"it's alive!"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7592,9 +7579,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Atom{String}: it's alive</pre>
+<pre>Atom{String}: it's alive!</pre>
 </div>
 </div>
 </div>
@@ -7604,7 +7591,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Atom</span><span class="p">(</span><span class="s">"it's mortal!"</span><span class="p">)</span>
@@ -7618,7 +7605,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>Atom{String}: it's mortal!</pre>
 </div>
@@ -7630,7 +7617,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">φ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="n">q</span>
@@ -7644,9 +7631,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>SyntaxBranch{NamedConnective{:∧}}: it's alive ∧ it's mortal!</pre>
+<pre>SyntaxBranch{NamedConnective{:∧}}: it's alive! ∧ it's mortal!</pre>
 </div>
 </div>
 </div>
@@ -7656,7 +7643,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">φ</span><span class="w"> </span><span class="k">isa</span><span class="w"> </span><span class="n">Formula</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="k">isa</span><span class="w"> </span><span class="n">Formula</span>
@@ -7670,7 +7657,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>true</pre>
 </div>
@@ -7682,7 +7669,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># φ is the root node of a syntax tree.</span>
@@ -7703,7 +7690,7 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>∧
-(Atom{String}: it's alive, Atom{String}: it's mortal!)
+(Atom{String}: it's alive!, Atom{String}: it's mortal!)
 </pre>
 </div>
 </div>
@@ -7714,7 +7701,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Create a method for negating any formula</span>
@@ -7731,7 +7718,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>negateformula (generic function with 1 method)</pre>
 </div>
@@ -7743,7 +7730,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">negateformula</span><span class="p">(</span><span class="n">φ</span><span class="p">)</span>
@@ -7757,9 +7744,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>SyntaxBranch{NamedConnective{:¬}}: ¬(it's alive ∧ it's mortal!)</pre>
+<pre>SyntaxBranch{NamedConnective{:¬}}: ¬(it's alive! ∧ it's mortal!)</pre>
 </div>
 </div>
 </div>
@@ -7769,7 +7756,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">negateformula</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
@@ -7783,9 +7770,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>SyntaxBranch{NamedConnective{:¬}}: ¬it's alive</pre>
+<pre>SyntaxBranch{NamedConnective{:¬}}: ¬it's alive!</pre>
 </div>
 </div>
 </div>
@@ -7795,7 +7782,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Obtain the string representation of a Formula</span>
@@ -7810,9 +7797,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>"it's alive ∧ it's mortal!"</pre>
+<pre>"it's alive! ∧ it's mortal!"</pre>
 </div>
 </div>
 </div>
@@ -7822,46 +7809,11 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># I can also parse Formula's from standard string representations</span>
-<span class="n">φ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseformula</span><span class="p">(</span><span class="s">"it's alive ∧ it's mortal!"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>SyntaxBranch{NamedConnective{:∧}}: it's alive ∧ it's mortal!</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ae67b123">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">SyntaxBranch</span><span class="p">{</span><span class="kt">NamedConnective</span><span class="p">{</span><span class="ss">:¬</span><span class="p">}})</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"It is not the case that </span><span class="si">$</span><span class="p">(</span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">first</span><span class="p">(</span><span class="n">children</span><span class="p">(</span><span class="n">f</span><span class="p">))))</span><span class="s">"</span>
-<span class="k">end</span>
-<span class="k">function</span><span class="w"> </span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">SyntaxBranch</span><span class="p">{</span><span class="kt">NamedConnective</span><span class="p">{</span><span class="ss">:∧</span><span class="p">}})</span>
-<span class="w">    </span><span class="n">subformula1</span><span class="p">,</span><span class="w"> </span><span class="n">subformula2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">children</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"both </span><span class="si">$</span><span class="p">(</span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">subformula1</span><span class="p">))</span><span class="s"> and </span><span class="si">$</span><span class="p">(</span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">subformula2</span><span class="p">))</span><span class="s">"</span>
-<span class="k">end</span>
-<span class="k">function</span><span class="w"> </span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">SyntaxLeaf</span><span class="p">)</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">syntaxstring</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="k">end</span>
+<div class="highlight hl-julia"><pre><span></span><span class="c"># I can also parse Formula's from standard string representations</span>
+<span class="n">φ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parseformula</span><span class="p">(</span><span class="s">"it's alive! ∧ it's mortal!"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7874,6 +7826,41 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>SyntaxBranch{NamedConnective{:∧}}: it's alive! ∧ it's mortal!</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ae67b123">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">SyntaxBranch</span><span class="p">{</span><span class="kt">NamedConnective</span><span class="p">{</span><span class="ss">:¬</span><span class="p">}})</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"It is not the case that </span><span class="si">$</span><span class="p">(</span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">first</span><span class="p">(</span><span class="n">children</span><span class="p">(</span><span class="n">f</span><span class="p">))))</span><span class="s">"</span>
+<span class="k">end</span>
+<span class="k">function</span><span class="w"> </span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">SyntaxBranch</span><span class="p">{</span><span class="kt">NamedConnective</span><span class="p">{</span><span class="ss">:∧</span><span class="p">}})</span>
+<span class="w">    </span><span class="n">subformula1</span><span class="p">,</span><span class="w"> </span><span class="n">subformula2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">children</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">"both </span><span class="si">$</span><span class="p">(</span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">subformula1</span><span class="p">))</span><span class="s"> and </span><span class="si">$</span><span class="p">(</span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">subformula2</span><span class="p">))</span><span class="s">"</span>
+<span class="k">end</span>
+<span class="k">function</span><span class="w"> </span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="n">f</span><span class="o">::</span><span class="kt">SyntaxTree</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">syntaxstring</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>my_own_string_representation (generic function with 3 methods)</pre>
 </div>
 </div>
@@ -7884,7 +7871,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">my_own_string_representation</span><span class="p">(</span><span class="o">¬</span><span class="n">φ</span><span class="p">)</span>
@@ -7898,9 +7885,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>"It is not the case that both it's alive and it's mortal!"</pre>
+<pre>"It is not the case that both it's alive! and it's mortal!"</pre>
 </div>
 </div>
 </div>
@@ -7910,43 +7897,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">Guido</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TruthDict</span><span class="p">([</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">false</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>TruthDict with values:
-┌──────────────┬────────────┐
-│<span class="ansi-bold"> it's mortal! </span>│<span class="ansi-bold"> it's alive </span>│
-│<span class="ansi-black-intense-fg">       String </span>│<span class="ansi-black-intense-fg">     String </span>│
-├──────────────┼────────────┤
-│            ⊥ │          ⊤ │
-└──────────────┴────────────┘
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1a700c75">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">Giovanni</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TruthDict</span><span class="p">([</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">true</span><span class="p">])</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">soul</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TruthDict</span><span class="p">([</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">false</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -7960,18 +7914,18 @@ a.anchor-link {
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>TruthDict with values:
-┌──────────────┬────────────┐
-│<span class="ansi-bold"> it's mortal! </span>│<span class="ansi-bold"> it's alive </span>│
-│<span class="ansi-black-intense-fg">       String </span>│<span class="ansi-black-intense-fg">     String </span>│
-├──────────────┼────────────┤
-│            ⊤ │          ⊤ │
-└──────────────┴────────────┘
+┌──────────────┬─────────────┐
+│<span class="ansi-bold"> it's mortal! </span>│<span class="ansi-bold"> it's alive! </span>│
+│<span class="ansi-black-intense-fg">       String </span>│<span class="ansi-black-intense-fg">      String </span>│
+├──────────────┼─────────────┤
+│            ⊥ │           ⊤ │
+└──────────────┴─────────────┘
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ca7fd25e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1a700c75">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7979,7 +7933,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">check</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">Guido</span><span class="p">)</span><span class="w"> </span><span class="c"># Guido is alive</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TruthDict</span><span class="p">([</span><span class="n">p</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">true</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -7992,12 +7946,19 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>true</pre>
+<pre>TruthDict with values:
+┌──────────────┬─────────────┐
+│<span class="ansi-bold"> it's mortal! </span>│<span class="ansi-bold"> it's alive! </span>│
+│<span class="ansi-black-intense-fg">       String </span>│<span class="ansi-black-intense-fg">      String </span>│
+├──────────────┼─────────────┤
+│            ⊤ │           ⊤ │
+└──────────────┴─────────────┘
+</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6563d348">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ca7fd25e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8005,7 +7966,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">check</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">Guido</span><span class="p">)</span><span class="w"> </span><span class="c"># But not both alive and mortal</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">check</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">soul</span><span class="p">)</span><span class="w"> </span><span class="c"># soul is alive</span>
 </pre></div>
 </div>
 </div>
@@ -8018,12 +7979,12 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>false</pre>
+<pre>true</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5183edd2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=6563d348">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8031,7 +7992,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">check</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">Giovanni</span><span class="p">)</span><span class="w"> </span><span class="c"># Giovanni is both alive and mortal!</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">check</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">soul</span><span class="p">)</span><span class="w"> </span><span class="c"># But not both alive and mortal</span>
 </pre></div>
 </div>
 </div>
@@ -8044,12 +8005,12 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>true</pre>
+<pre>false</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=63dd28ac">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5183edd2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8057,9 +8018,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># These objects can actually be used as dictionaries from Formula to Truth values</span>
-<span class="c"># For example, we both assign ⊤ (top) to the atom "alive"</span>
-<span class="n">Guido</span><span class="p">[</span><span class="n">p</span><span class="p">],</span><span class="w"> </span><span class="n">Giovanni</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">check</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="p">)</span><span class="w"> </span><span class="c"># body is both alive and mortal!</span>
 </pre></div>
 </div>
 </div>
@@ -8072,7 +8031,35 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>(⊤, ⊤)</pre>
+<pre>true</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=63dd28ac">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># These objects can actually be used as dictionaries from Formula to Truth values</span>
+<span class="c"># For example, we both assign ⊤ (top) to the atom "alive"</span>
+<span class="n">soul</span><span class="p">[</span><span class="n">q</span><span class="p">],</span><span class="w"> </span><span class="n">body</span><span class="p">[</span><span class="n">q</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>(⊥, ⊤)</pre>
 </div>
 </div>
 </div>
@@ -8082,7 +8069,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># What is ⊤?</span>
@@ -8097,7 +8084,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>true</pre>
 </div>
@@ -8109,40 +8096,11 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># Now it's time to say it: these Unicode character are</span>
-<span class="c">#  not too comfy for a Jupyter Notebook. Let's use their aliases.</span>
-<span class="n">TOP</span><span class="p">,</span><span class="w"> </span><span class="n">BOT</span><span class="p">,</span><span class="w"> </span><span class="n">CONJUNCTION</span><span class="p">,</span><span class="w"> </span><span class="n">DISJUNCTION</span><span class="p">,</span><span class="w"> </span><span class="n">IMPLICATION</span>
-<span class="c">#  (but try typing \top&lt;tab&gt; in the Julia REPL)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>(⊤, ⊥, ∧, ∨, →)</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d9c52872">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># Actually, indexing (with []) can be used to check generic Formula's</span>
-<span class="n">Guido</span><span class="p">[</span><span class="n">φ</span><span class="p">]</span>
+<div class="highlight hl-julia"><pre><span></span><span class="c"># By the way, if you find these Unicode characters uncomfortable to work with, they have aliases:</span>
+<span class="p">(</span><span class="n">TOP</span><span class="p">,</span><span class="w"> </span><span class="n">BOT</span><span class="p">,</span><span class="w"> </span><span class="n">CONJUNCTION</span><span class="p">,</span><span class="w"> </span><span class="n">DISJUNCTION</span><span class="p">,</span><span class="w"> </span><span class="n">IMPLICATION</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8155,12 +8113,12 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>⊥</pre>
+<pre>(⊤, ⊥, ∧, ∨, →)</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ec744724">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d9c52872">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8168,8 +8126,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># This is syntactic sugar for the *interpretation* algorithm, which is actually more general than check!</span>
-<span class="n">interpret</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">Guido</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="c"># Actually, indexing (with [⋅]) can be used to check generic Formula's</span>
+<span class="n">soul</span><span class="p">[</span><span class="n">φ</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -8187,7 +8145,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9a69ccb3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ec744724">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8195,9 +8153,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># In fact, it also works under incomplete information.</span>
-<span class="c"># Notice how in this example, with an *unknown atom*, it uses the *known* information to simplify the formula</span>
-<span class="n">Giovanni</span><span class="p">[</span><span class="n">φ</span><span class="w"> </span><span class="o">∨</span><span class="w"> </span><span class="n">Atom</span><span class="p">(</span><span class="s">"?Unknown property?"</span><span class="p">)]</span>
+<div class="highlight hl-julia"><pre><span></span><span class="c"># This is syntactic sugar for the *interpretation* algorithm, which is actually more general than check!</span>
+<span class="n">interpret</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">soul</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8210,12 +8167,12 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>⊤</pre>
+<pre>⊥</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=717be11c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9a69ccb3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8223,8 +8180,8 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># So ultimately, `check` is just a shortcut for making sure that `interpret` simplifies the formula to ⊤</span>
-<span class="n">check</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">Guido</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">istop</span><span class="p">(</span><span class="n">interpret</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">Guido</span><span class="p">))</span>
+<div class="highlight hl-julia"><pre><span></span><span class="c"># In fact, it also works under incomplete information.</span>
+<span class="n">body</span><span class="p">[</span><span class="n">φ</span><span class="w"> </span><span class="o">∧</span><span class="w"> </span><span class="n">Atom</span><span class="p">(</span><span class="s">"?Unknown property?"</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
@@ -8237,6 +8194,60 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Atom{String}: ?Unknown property?</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9c58e360">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># Notice how in this example, with an *unknown atom*, it uses the *known* information to simplify the formula</span>
+<span class="n">body</span><span class="p">[</span><span class="n">φ</span><span class="w"> </span><span class="o">∨</span><span class="w"> </span><span class="n">Atom</span><span class="p">(</span><span class="s">"?Unknown property?"</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>⊤</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=717be11c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># So ultimately, `check` is just a shortcut for making sure that `interpret` simplifies the formula to ⊤</span>
+<span class="n">check</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">soul</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">istop</span><span class="p">(</span><span class="n">interpret</span><span class="p">(</span><span class="n">φ</span><span class="p">,</span><span class="w"> </span><span class="n">soul</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>true</pre>
 </div>
 </div>
@@ -8247,7 +8258,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Let's generate random formulas</span>
@@ -8264,9 +8275,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>SyntaxBranch{NamedConnective{:→}}: (¬b ∧ a ∧ a) → (b ∨ a ∨ (b → b))</pre>
+<pre>SyntaxBranch{NamedConnective{:∨}}: ((a ∨ b) → (a ∧ b)) ∨ ¬b ∧ b ∧ b</pre>
 </div>
 </div>
 </div>
@@ -8276,7 +8287,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Let's control reproducibility, though ;)</span>
@@ -8293,7 +8304,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>SyntaxBranch{NamedConnective{:¬}}: ¬(b ∧ a ∧ ¬b)</pre>
 </div>
@@ -8305,7 +8316,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">normalize</span><span class="p">(</span><span class="n">φ2</span><span class="p">)</span>
@@ -8319,7 +8330,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>SyntaxBranch{NamedConnective{:∨}}: ¬a ∨ b ∨ ¬b</pre>
 </div>
@@ -8333,8 +8344,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="HOMEWORK-EXERCISE-1">HOMEWORK EXERCISE 1<a class="anchor-link" href="#HOMEWORK-EXERCISE-1">¶</a></h4><p>Check many, randomly-generated formulas on the alphabet ${p, q}$ on both <code>Guido</code> and <code>Giovanni</code>.
-Do <code>Guido</code> and <code>Giovanni</code> have the same probability of satisfying a generic formula? Can you estimate this probability?</p>
+<h4 id="Exercise-1:">Exercise 1:<a class="anchor-link" href="#Exercise-1:">¶</a></h4><p>Check many, randomly-generated formulas on the alphabet ${p, q}$ on both <code>soul</code> and <code>body</code>.
+Do <code>soul</code> and <code>body</code> have the same probability of satisfying a generic formula? Can you estimate this probability?</p>
 </div>
 </div>
 </div>
@@ -8345,7 +8356,7 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Scalar-logisets">Scalar logisets<a class="anchor-link" href="#Scalar-logisets">¶</a></h3>
+<h3 id="Scalar-interpretations">Scalar interpretations<a class="anchor-link" href="#Scalar-interpretations">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8356,7 +8367,8 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now, let's consider a propositional interpretation on scalar variables, and check formulas on an alphabet $\mathcal{A} \subseteq \{V &lt; v, v \in \mathbb{R}\}$ on it.</p>
+<p>Now, let's consider a propositional interpretation on scalar attributes $A_1, A_2, \ldots$, and check formulas on an alphabet $\mathcal{A} \subseteq \{A_i &lt; v, v \in \mathbb{R}\}$ on it.</p>
+<p>We start by defining the atoms of type $A_i &lt; v.$</p>
 </div>
 </div>
 </div>
@@ -8365,87 +8377,21 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">syntaxstring</span>
 
-<span class="k">struct</span> <span class="kt">ConditionOnVariable</span>
-<span class="w">    </span><span class="n">i_variable</span><span class="o">::</span><span class="kt">Integer</span>
-<span class="w">    </span><span class="n">threshold</span><span class="o">::</span><span class="kt">Number</span>
+<span class="k">struct</span> <span class="kt">ConditionOnAttribute</span>
+<span class="w">    </span><span class="n">i_attribute</span><span class="o">::</span><span class="kt">Integer</span>
+<span class="w">    </span><span class="n">threshold</span><span class="o">::</span><span class="kt">Real</span>
 <span class="k">end</span>
 
-<span class="k">function</span><span class="w"> </span><span class="n">syntaxstring</span><span class="p">(</span><span class="n">c</span><span class="o">::</span><span class="kt">ConditionOnVariable</span><span class="p">;</span><span class="w"> </span><span class="n">kwargs</span><span class="o">...</span><span class="p">)</span>
-<span class="w">    </span><span class="s">"V</span><span class="si">$</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">i_variable</span><span class="p">)</span><span class="s"> &lt; </span><span class="si">$</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">threshold</span><span class="p">)</span><span class="s">"</span>
+<span class="k">function</span><span class="w"> </span><span class="n">syntaxstring</span><span class="p">(</span><span class="n">c</span><span class="o">::</span><span class="kt">ConditionOnAttribute</span><span class="p">;</span><span class="w"> </span><span class="n">kwargs</span><span class="o">...</span><span class="p">)</span>
+<span class="w">    </span><span class="s">"A</span><span class="si">$</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">i_attribute</span><span class="p">)</span><span class="s"> &lt; </span><span class="si">$</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">threshold</span><span class="p">)</span><span class="s">"</span>
 <span class="k">end</span>
 
-<span class="n">syntaxstring</span><span class="p">(</span><span class="n">ConditionOnVariable</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>"V2 &lt; 10"</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0350840a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">AbstractAssignment</span><span class="w"> </span><span class="c"># Propositional Interpretations</span>
-
-<span class="k">struct</span> <span class="kt">TabularInterpretation</span><span class="p">{</span><span class="kt">T</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="kt">AbstractAssignment</span>
-<span class="w">    </span><span class="n">vals</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
-<span class="k">end</span>
-
-<span class="k">import</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">interpret</span>
-
-<span class="k">function</span><span class="w"> </span><span class="n">interpret</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">Atom</span><span class="p">{</span><span class="kt">ConditionOnVariable</span><span class="p">},</span><span class="w"> </span><span class="n">I</span><span class="o">::</span><span class="kt">TabularInterpretation</span><span class="p">)</span>
-<span class="w">    </span><span class="n">cond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">I</span><span class="o">.</span><span class="n">vals</span><span class="p">[</span><span class="n">cond</span><span class="o">.</span><span class="n">i_variable</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">cond</span><span class="o">.</span><span class="n">threshold</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">BOT</span><span class="p">)</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>interpret (generic function with 12 methods)</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ec6a49ad">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Random</span><span class="o">.</span><span class="n">MersenneTwister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">n_variables</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
-
-<span class="n">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TabularInterpretation</span><span class="p">(</span><span class="n">rand</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span><span class="w"> </span><span class="n">n_variables</span><span class="p">))</span>
+<span class="n">syntaxstring</span><span class="p">(</span><span class="n">ConditionOnAttribute</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8458,12 +8404,12 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[31]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>TabularInterpretation{Float64}([0.23603334566204692, 0.34651701419196046, 0.3127069683360675, 0.00790928339056074])</pre>
+<pre>"A2 &lt; 10"</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f5d49221">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0350840a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8471,8 +8417,18 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 <div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Atom</span><span class="o">.</span><span class="p">([</span><span class="n">ConditionOnVariable</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="n">n_variables</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mf">1.0</span><span class="p">])</span>
-<span class="n">syntaxstring</span><span class="o">.</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">AbstractAssignment</span><span class="w"> </span><span class="c"># Abstract type for propositional Interpretations</span>
+
+<span class="k">struct</span> <span class="kt">TabularInterpretation</span><span class="p">{</span><span class="kt">T</span><span class="o">&lt;:</span><span class="kt">Real</span><span class="p">}</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="kt">AbstractAssignment</span>
+<span class="w">    </span><span class="n">vals</span><span class="o">::</span><span class="kt">Vector</span><span class="p">{</span><span class="kt">T</span><span class="p">}</span>
+<span class="k">end</span>
+
+<span class="k">import</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">interpret</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">interpret</span><span class="p">(</span><span class="n">a</span><span class="o">::</span><span class="kt">Atom</span><span class="p">{</span><span class="kt">ConditionOnAttribute</span><span class="p">},</span><span class="w"> </span><span class="n">I</span><span class="o">::</span><span class="kt">TabularInterpretation</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">I</span><span class="o">.</span><span class="n">vals</span><span class="p">[</span><span class="n">cond</span><span class="o">.</span><span class="n">i_attribute</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">cond</span><span class="o">.</span><span class="n">threshold</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">⊤</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">⊥</span><span class="p">)</span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
@@ -8485,33 +8441,90 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>interpret (generic function with 12 methods)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ec6a49ad">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Random</span><span class="o">.</span><span class="n">MersenneTwister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">n_variables</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+
+<span class="n">vals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">(</span><span class="n">rng</span><span class="p">,</span><span class="w"> </span><span class="n">n_variables</span><span class="p">)</span>
+<span class="n">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TabularInterpretation</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>TabularInterpretation{Float64}([0.23603334566204692, 0.34651701419196046, 0.3127069683360675, 0.00790928339056074])</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f5d49221">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Atom</span><span class="o">.</span><span class="p">([</span><span class="n">ConditionOnAttribute</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="n">n_variables</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">:</span><span class="mf">0.1</span><span class="o">:</span><span class="mf">1.0</span><span class="p">])</span>
+<span class="n">syntaxstring</span><span class="o">.</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>44-element Vector{String}:
- "V1 &lt; 0.0"
- "V1 &lt; 0.1"
- "V1 &lt; 0.2"
- "V1 &lt; 0.3"
- "V1 &lt; 0.4"
- "V1 &lt; 0.5"
- "V1 &lt; 0.6"
- "V1 &lt; 0.7"
- "V1 &lt; 0.8"
- "V1 &lt; 0.9"
- "V1 &lt; 1.0"
- "V2 &lt; 0.0"
- "V2 &lt; 0.1"
+ "A1 &lt; 0.0"
+ "A1 &lt; 0.1"
+ "A1 &lt; 0.2"
+ "A1 &lt; 0.3"
+ "A1 &lt; 0.4"
+ "A1 &lt; 0.5"
+ "A1 &lt; 0.6"
+ "A1 &lt; 0.7"
+ "A1 &lt; 0.8"
+ "A1 &lt; 0.9"
+ "A1 &lt; 1.0"
+ "A2 &lt; 0.0"
+ "A2 &lt; 0.1"
  ⋮
- "V3 &lt; 1.0"
- "V4 &lt; 0.0"
- "V4 &lt; 0.1"
- "V4 &lt; 0.2"
- "V4 &lt; 0.3"
- "V4 &lt; 0.4"
- "V4 &lt; 0.5"
- "V4 &lt; 0.6"
- "V4 &lt; 0.7"
- "V4 &lt; 0.8"
- "V4 &lt; 0.9"
- "V4 &lt; 1.0"</pre>
+ "A3 &lt; 1.0"
+ "A4 &lt; 0.0"
+ "A4 &lt; 0.1"
+ "A4 &lt; 0.2"
+ "A4 &lt; 0.3"
+ "A4 &lt; 0.4"
+ "A4 &lt; 0.5"
+ "A4 &lt; 0.6"
+ "A4 &lt; 0.7"
+ "A4 &lt; 0.8"
+ "A4 &lt; 0.9"
+ "A4 &lt; 1.0"</pre>
 </div>
 </div>
 </div>
@@ -8521,7 +8534,7 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="p">[</span><span class="n">interpret</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">cond</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">A</span><span class="p">]</span>
@@ -8535,7 +8548,7 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>44-element Vector{BooleanTruth}:
  ⊥
@@ -8573,7 +8586,7 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Random</span><span class="o">.</span><span class="n">MersenneTwister</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
@@ -8592,19 +8605,19 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>10-element Vector{Pair{String}}:
-                 "(¬V2 &lt; 0.4 ∧ (V1 &lt; 0.5 → V4 &lt; 0.8)) → (V4 &lt; 0.4 ∧ V4 &lt; 0.9 ∧ V2 &lt; 0.9 ∧ V1 &lt; 0.2)" =&gt; ⊤
-                     "V4 &lt; 0.1 ∨ V2 &lt; 0.6 ∨ V4 &lt; 0.8 ∨ V2 &lt; 0.5 ∨ ¬V4 &lt; 0.8 ∧ (V2 &lt; 0.4 → V1 &lt; 0.5)" =&gt; ⊤
-                                                   "¬(V3 &lt; 0.6 ∧ V4 &lt; 0.9) ∧ ¬(V2 &lt; 0.3 → V1 &lt; 1.0)" =&gt; ⊥
-                                                "¬¬V4 &lt; 0.6 ∧ ((¬V1 &lt; 0.0) → (V2 &lt; 0.4 ∧ V2 &lt; 0.3))" =&gt; ⊥
-   "((V4 &lt; 0.4 → V4 &lt; 1.0) ∨ V1 &lt; 0.7 ∨ V2 &lt; 0.7) → ((V3 &lt; 0.3 → V4 &lt; 0.3) ∧ (V2 &lt; 0.2 ∨ V3 &lt; 0.5))" =&gt; ⊤
- "((V4 &lt; 0.0 → V2 &lt; 0.3) → (V4 &lt; 0.2 ∧ V3 &lt; 0.9)) ∨ ((V1 &lt; 0.8 → V1 &lt; 0.4) → (V2 &lt; 0.7 → V2 &lt; 0.0))" =&gt; ⊤
-                           "¬V3 &lt; 0.6 ∧ ¬V3 &lt; 1.0 ∧ ((V3 &lt; 0.5 → V3 &lt; 0.5) → (V3 &lt; 0.8 ∧ V4 &lt; 0.3))" =&gt; ⊥
-                                                                "¬(V3 &lt; 0.6 ∧ V1 &lt; 0.1 ∧ ¬V1 &lt; 0.7)" =&gt; ⊤
-                                                   "¬(V1 &lt; 0.0 ∨ V3 &lt; 0.5) ∧ ¬(V4 &lt; 0.2 ∨ V1 &lt; 0.8)" =&gt; ⊥
-                                                                          "¬(¬V1 &lt; 0.5 ∨ ¬V3 &lt; 0.8)" =&gt; ⊤</pre>
+                 "(¬A2 &lt; 0.4 ∧ (A1 &lt; 0.5 → A4 &lt; 0.8)) → (A4 &lt; 0.4 ∧ A4 &lt; 0.9 ∧ A2 &lt; 0.9 ∧ A1 &lt; 0.2)" =&gt; ⊤
+                     "A4 &lt; 0.1 ∨ A2 &lt; 0.6 ∨ A4 &lt; 0.8 ∨ A2 &lt; 0.5 ∨ ¬A4 &lt; 0.8 ∧ (A2 &lt; 0.4 → A1 &lt; 0.5)" =&gt; ⊤
+                                                   "¬(A3 &lt; 0.6 ∧ A4 &lt; 0.9) ∧ ¬(A2 &lt; 0.3 → A1 &lt; 1.0)" =&gt; ⊥
+                                                "¬¬A4 &lt; 0.6 ∧ ((¬A1 &lt; 0.0) → (A2 &lt; 0.4 ∧ A2 &lt; 0.3))" =&gt; ⊥
+   "((A4 &lt; 0.4 → A4 &lt; 1.0) ∨ A1 &lt; 0.7 ∨ A2 &lt; 0.7) → ((A3 &lt; 0.3 → A4 &lt; 0.3) ∧ (A2 &lt; 0.2 ∨ A3 &lt; 0.5))" =&gt; ⊤
+ "((A4 &lt; 0.0 → A2 &lt; 0.3) → (A4 &lt; 0.2 ∧ A3 &lt; 0.9)) ∨ ((A1 &lt; 0.8 → A1 &lt; 0.4) → (A2 &lt; 0.7 → A2 &lt; 0.0))" =&gt; ⊤
+                           "¬A3 &lt; 0.6 ∧ ¬A3 &lt; 1.0 ∧ ((A3 &lt; 0.5 → A3 &lt; 0.5) → (A3 &lt; 0.8 ∧ A4 &lt; 0.3))" =&gt; ⊥
+                                                                "¬(A3 &lt; 0.6 ∧ A1 &lt; 0.1 ∧ ¬A1 &lt; 0.7)" =&gt; ⊤
+                                                   "¬(A1 &lt; 0.0 ∨ A3 &lt; 0.5) ∧ ¬(A4 &lt; 0.2 ∨ A1 &lt; 0.8)" =&gt; ⊥
+                                                                          "¬(¬A1 &lt; 0.5 ∨ ¬A3 &lt; 0.8)" =&gt; ⊤</pre>
 </div>
 </div>
 </div>
@@ -8616,7 +8629,7 @@ Do <code>Guido</code> and <code>Giovanni</code> have the same probability of sat
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="HOMEWORK-EXERCISE-2">HOMEWORK EXERCISE 2<a class="anchor-link" href="#HOMEWORK-EXERCISE-2">¶</a></h4><p>Check many, randomly-generated formulas on many, randomly-generated tabular interpretations,
+<h4 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">¶</a></h4><p>Check many, randomly-generated formulas on many, randomly-generated tabular interpretations,
 and store the formulas that satisfy the highest number of instances!</p>
 </div>
 </div>
@@ -8637,7 +8650,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Instantiate a frame with 5 worlds and 5 edges</span>
@@ -8656,7 +8669,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>SoleLogics.ExplicitCrispUniModalFrame{SoleLogics.World{Int64}, SimpleDiGraph{Int64}} with
 - worlds = ["1", "2", "3", "4", "5"]
@@ -8676,7 +8689,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Pick the first world</span>
@@ -8694,36 +8707,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>2-element Vector{SoleLogics.World{Int64}}:
- SoleLogics.World{Int64}(2)
- SoleLogics.World{Int64}(3)</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=72d9105d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># That's an iterator of worlds... If I want to see them, I'll collect them.</span>
-<span class="n">collect</span><span class="p">(</span><span class="n">accessibles</span><span class="p">(</span><span class="n">fr</span><span class="p">,</span><span class="w"> </span><span class="n">w1</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>2-element Vector{SoleLogics.World{Int64}}:
  SoleLogics.World{Int64}(2)
@@ -8737,7 +8721,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Assign each world a propositional interpretation</span>
@@ -8761,7 +8745,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>KripkeStructure{SoleLogics.ExplicitCrispUniModalFrame{SoleLogics.World{Int64}, SimpleDiGraph{Int64}}, Dict{SoleLogics.World{Int64}, TruthDict{Dict{Atom{String}, BooleanTruth}}}} with
 - frame = SoleLogics.ExplicitCrispUniModalFrame{SoleLogics.World{Int64}, SimpleDiGraph{Int64}} with
@@ -8773,11 +8757,11 @@ and store the formulas that satisfy the highest number of instances!</p>
 	4 -&gt; []
 	5 -&gt; []
 - valuations = 
-	1 -&gt; TruthDict([it's mortal! =&gt; ⊥, it's alive =&gt; ⊤])
-	2 -&gt; TruthDict([it's mortal! =&gt; ⊤, it's alive =&gt; ⊤])
-	3 -&gt; TruthDict([it's mortal! =&gt; ⊥, it's alive =&gt; ⊤])
-	4 -&gt; TruthDict([it's mortal! =&gt; ⊥, it's alive =&gt; ⊥])
-	5 -&gt; TruthDict([it's mortal! =&gt; ⊤, it's alive =&gt; ⊥])
+	1 -&gt; TruthDict([it's mortal! =&gt; ⊥, it's alive! =&gt; ⊤])
+	2 -&gt; TruthDict([it's mortal! =&gt; ⊤, it's alive! =&gt; ⊤])
+	3 -&gt; TruthDict([it's mortal! =&gt; ⊥, it's alive! =&gt; ⊤])
+	4 -&gt; TruthDict([it's mortal! =&gt; ⊥, it's alive! =&gt; ⊥])
+	5 -&gt; TruthDict([it's mortal! =&gt; ⊤, it's alive! =&gt; ⊥])
 </pre>
 </div>
 </div>
@@ -8788,7 +8772,7 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="c"># Generate a random modal formula</span>
@@ -8810,12 +8794,12 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>□(it's alive → it's mortal!) ∨ ¬(it's alive → it's alive)
+<pre>□(it's alive! → it's mortal!) ∨ ¬(it's alive! → it's alive!)
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>5-element Vector{Pair{SoleLogics.World{Int64}, Bool}}:
  SoleLogics.World{Int64}(1) =&gt; 0
@@ -8828,13 +8812,26 @@ and store the formulas that satisfy the highest number of instances!</p>
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=67913778">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">¶</a></h4><p>Check many, randomly-generated <em>modal</em> formulas on many, randomly-generated <em>modal</em> interpretations,
+and store the formulas that satisfy the highest number of instances!</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72d1413a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="EXERCISE-3">EXERCISE 3<a class="anchor-link" href="#EXERCISE-3">¶</a></h4><p>Define a structure for representing a <em>modal</em> interpretation on scalar variables.</p>
+<h4 id="Exercise-4">Exercise 4<a class="anchor-link" href="#Exercise-4">¶</a></h4><p>Define a structure for representing a <em>modal</em> interpretation on scalar variables. You can see if your solution it works by running the cell below, which instantiates a random modal scalar interpretation.</p>
+<p>Note: Julia <a href="https://github.com/timholy/Revise.jl/issues/18">currently</a> does not allow redefining structures at the global scope, so the code is wrapped in a module.</p>
 </div>
 </div>
 </div>
@@ -8843,10 +8840,18 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">AbstractFrame</span><span class="p">,</span><span class="w"> </span><span class="n">World</span><span class="p">,</span><span class="w"> </span><span class="n">AbstractKripkeStructure</span>
+<div class="highlight hl-julia"><pre><span></span><span class="k">module</span><span class="w"> </span><span class="n">exercise4</span>
+
+<span class="k">export</span><span class="w"> </span><span class="n">ModalInterpretation</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">Main</span><span class="o">:</span><span class="w"> </span><span class="n">ConditionOnAttribute</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">SoleLogics</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">SoleLogics</span><span class="o">:</span><span class="w"> </span><span class="n">AbstractFrame</span><span class="p">,</span><span class="w"> </span><span class="n">World</span><span class="p">,</span><span class="w"> </span><span class="n">AbstractKripkeStructure</span>
 
 <span class="c"># TODO:</span>
 <span class="c"># struct ModalInterpretation{FR&lt;:AbstractFrame,T&lt;:Real} &lt;: AbstractKripkeStructure</span>
@@ -8860,11 +8865,14 @@ and store the formulas that satisfy the highest number of instances!</p>
 <span class="n">frame</span><span class="p">(</span><span class="n">i</span><span class="o">::</span><span class="kt">ModalInterpretation</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">.</span><span class="n">frame</span>
 
 <span class="c"># TODO:</span>
-<span class="c"># function interpret(a::Atom{ConditionOnVariable}, I::ModalInterpretation, w::World)</span>
+<span class="c"># function interpret(a::Atom{ConditionOnAttribute}, I::ModalInterpretation, w::World)</span>
 <span class="c">#     cond = value(a)</span>
 <span class="c">#     v = ???</span>
 <span class="c">#     return (v &lt; cond.threshold ? TOP : BOT)</span>
 <span class="c"># end</span>
+
+
+<span class="k">end</span><span class="w"> </span><span class="c"># end module</span>
 </pre></div>
 </div>
 </div>
@@ -8877,12 +8885,19 @@ and store the formulas that satisfy the highest number of instances!</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>WARNING: replacing module exercise4.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>
 UndefVarError: `ModalInterpretation` not defined
 
 Stacktrace:
  [1] top-level scope
-   @ In[40]:12</pre>
+   @ In[45]:20</pre>
 </div>
 </div>
 </div>
@@ -8892,10 +8907,12 @@ Stacktrace:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Random</span><span class="o">.</span><span class="n">MersenneTwister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="o">.</span><span class="n">exercise4</span>
+
+<span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Random</span><span class="o">.</span><span class="n">MersenneTwister</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">n_variables</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
 <span class="n">n_worlds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
 <span class="n">n_edges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span>
@@ -8931,33 +8948,7 @@ UndefVarError: `ModalInterpretation` not defined
 
 Stacktrace:
  [1] top-level scope
-   @ In[41]:12</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a04b90e7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h4 id="EXERCISE-4">EXERCISE 4<a class="anchor-link" href="#EXERCISE-4">¶</a></h4><p>Check many, randomly-generated <em>modal</em> formulas on many, randomly-generated <em>modal</em> interpretations,
-and store the formulas that satisfy the highest number of instances!</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c8cff629">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="c"># TODO</span>
-</pre></div>
+   @ In[46]:14</pre>
 </div>
 </div>
 </div>
