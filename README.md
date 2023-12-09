@@ -14,7 +14,7 @@ This will install all dependencies, including:
 - [Sole.jl](https://github.com/aclai-lab/Sole.jl): framework for (modal) symbolic learning;
 - [ModalDecisionTrees.jl](https://github.com/aclai-lab/ModalDecisionTrees.jl): machine learning algorithm for extracting modal decision trees.
 
-To open the Jupyter Notebook's, start Jupyter Notebook with the Julia backend by typing:
+To open the notebooks, start Jupyter Notebook with the Julia backend by typing:
 ```
 using IJulia; notebook()
 ```
@@ -23,6 +23,7 @@ Then, navigate to this repository's directory, and... have fun! 😄
 ## Useful references
 
 - Documentation for MLJ: https://alan-turing-institute.github.io/MLJ.jl
+- Documentation for Sole: https://aclai-lab.github.io/Sole.jl/
 - Documentation for SoleLogics: https://aclai-lab.github.io/SoleLogics.jl/
 - Documentation for SoleModels: https://aclai-lab.github.io/SoleModels.jl/
 - Documentation for ModalDecisionTrees: https://aclai-lab.github.io/ModalDecisionTrees.jl/
