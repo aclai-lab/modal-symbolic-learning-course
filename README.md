@@ -27,6 +27,7 @@ Have fun! 😄
 ## Online references
 
 - Documentation for MLJ: https://alan-turing-institute.github.io/MLJ.jl
+- Documentation for Sole: https://aclai-lab.github.io/Sole.jl/
 - Documentation for SoleLogics: https://aclai-lab.github.io/SoleLogics.jl/
 - Documentation for SoleModels: https://aclai-lab.github.io/SoleModels.jl/
 - Documentation for ModalDecisionTrees: https://aclai-lab.github.io/ModalDecisionTrees.jl/
