@@ -1,8 +1,12 @@
 [deps]
+Catch22 = "acdeb78f-3d39-4310-8fdf-6d75c17c6d5a"
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
 DecisionTree = "7806a523-6efd-50cb-b5f6-3fa6f1930dbb"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+ImageFiltering = "6a3955dd-da59-5b1f-98d4-e7296123deb5"
 JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+MAT = "23992714-dd62-5051-b70f-ba57cb901cac"
 MLJ = "add582a8-e3ab-11e8-2d5e-e98b27df1bc7"
 MLJDecisionTreeInterface = "c6f25543-311c-4c74-83dc-3ea6d1015661"
 ModalDecisionTrees = "e54bda2e-c571-11ec-9d64-0242ac120002"
@@ -15,3 +19,6 @@ StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 
 [compat]
 Sole = "0.3"
+SoleLogics = "0.6"
+SoleModels = "0.5"
+ModalDecisionTrees = "0.3"

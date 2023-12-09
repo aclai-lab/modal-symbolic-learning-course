@@ -1,4 +1,4 @@
 Manifest.toml
 .ipynb_checkpoints
 
-COVID-dataset.jld2
+data/*
