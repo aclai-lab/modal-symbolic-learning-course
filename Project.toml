@@ -19,6 +19,6 @@ StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 
 [compat]
 Sole = "0.3"
-SoleLogics = "0.6"
-SoleModels = "0.5"
+SoleLogics = "0.8"
+SoleModels = "0.6"
 ModalDecisionTrees = "0.3"
