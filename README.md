@@ -1,6 +1,6 @@
 # Modal Symbolic Learning: A Tutorial – Material
 
-This repository contains the slides and the Jupyter notebooks for "Modal Symbolic Learning: A Tutorial".
+This repository contains the slides and the Jupyter notebooks for "Modal Symbolic Learning: A Tutorial" ([online video lectures here](https://www.youtube.com/playlist?list=PLyuPAlvJWIqLvYpGhenzXCA1JMW2HQwBv)).
 
 You can inspect the notebooks without cloning the repo; simply click on any `ipynb` file above.
 
