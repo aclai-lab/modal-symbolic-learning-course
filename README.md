@@ -4,8 +4,14 @@ This repository contains the slides and the Jupyter notebooks for "Modal Symboli
 
 You can inspect the notebooks without cloning the repo; simply click on any `ipynb` file above.
 
-Otherwise... Clone the repo, open a Julia session,
-activate and instantiate the environment, as in:
+Otherwise... Clone the repo, open a Julia session:
+```julia
+git clone https://github.com/aclai-lab/modal-symbolic-learning-course/
+cd modal-symbolic-learning-course
+julia -t8 # With 8 threads, for example
+```
+
+Then, activate and instantiate the environment:
 ```julia
 Pkg.activate(".")
 Pkg.instantiate()
